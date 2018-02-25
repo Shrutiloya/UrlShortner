@@ -9,7 +9,7 @@ import {AuthService, GoogleLoginProvider, SocialUser} from "angular4-social-logi
 export class NavbarComponent implements OnInit {
 
   private user: SocialUser;
-  private loggedIn: boolean;
+  public loggedIn: boolean;
 
     constructor(private authService: AuthService) {
     }

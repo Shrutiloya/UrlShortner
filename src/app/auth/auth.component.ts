@@ -13,7 +13,7 @@ export class AuthComponent implements OnInit {
   private urlList : UrlList;
   private validUrl: boolean;
   private errMsg: string;
-  private urlsAvailable: boolean;
+  public urlsAvailable: boolean;
 
   constructor(private http: HttpClient) { }
 
