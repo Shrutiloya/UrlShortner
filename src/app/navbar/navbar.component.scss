@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+:host {
+    width: 100%;
+}
+
+.navigation {
+    background-color: #4284e2;
+    color: #3f4bff;
+    width: 100%;
+    padding: 0px 10px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.26);
+    font-size: 125%;
+  text-align: left !important;
+    //border-bottom: 1px solid $accent;
+    @media screen and (max-width: 700px) {
+        padding: 10px !important;
+    }
+}
+
+.nav-items a {
+    padding: 0 10px;
+    margin: 0 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #2672ff !important;
+    @media screen and (max-width: 475px) {
+        margin: 0 !important;
+        font-size: 80%;
+    }
+    &:hover {
+        border: 0 none transparent !important;
+        background-color: #3f34ca;
+    }
+}
+
+.title {
+    margin-left: 10px;
+  margin-top: 10px;
+  @media screen and (max-width: 750px) {
+        margin-left: 0 !important;
+        flex-shrink: 0;
+        justify-content: center !important;
+        align-items: left !important;
+        flex-basis: 100%;
+    }
+    .nav-heading {
+        color: #4284e2;
+        font-size: 125%;
+    }
+}
+
+.nav-items {
+    @media screen and (max-width: 750px) {
+        flex-basis: 100%;
+    }
+}
+
+strong {
+    font-family: 'Dancing Script', cursive;
+    color: #31fffe;
+}
+
+
+
+.social-login{
+  text-align:center;
+  font-size:12px;
+}
+.social-login p{
+  margin:15px 0;
+}
+.social-login ul{
+  margin:0;
+  padding:0;
+  list-style-type:circle;
+}
+
+.social-login ul li a{
+  font-size:13px;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 10px;
+  display:block;
+  height: 10%;
+  background-color: #4284e2;
+  line-height: 30px;
+}
+
+.circle-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.social-login ul li a:hover{
+  background-color: #2d538f;
+
+}
+

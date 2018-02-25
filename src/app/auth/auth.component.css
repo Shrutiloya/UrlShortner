@@ -1,0 +1,45 @@
+.sa-innate-form input[type=text], input[type=password], input[type=file], textarea, select{
+  font-size:13px;
+  padding:10px;
+  border:1px solid#ccc;
+  outline:none;
+  width:30%;
+  margin:8px 0;
+
+}
+.sa-innate-form button{
+  border:1px solid#2d538f;
+  background:#2d538f;
+  color:#fff;
+  padding:10px 25px;
+  font-size:14px;
+  margin-top:5px;
+}
+.sa-innate-form button:hover{
+  border:1px solid#2d538f;
+  background:#2d538f;
+  color:#fff;
+}
+.sa-innate-form button:disabled{
+  border:1px solid#9ac1f6;
+  background: #9ac1f6;
+  color:#fff;
+}
+
+.sa-innate-form p{
+  font-size:13px;
+  padding-top:10px;
+}
+
+.btn-url {
+  border:1px solid#2d538f;
+  background:#2d538f;
+  color:#fff;
+  padding:10px 25px;
+  font-size:14px;
+  margin-top:5px;
+}
+
+.container {
+  margin-top: 30px;
+}

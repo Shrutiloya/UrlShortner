@@ -1,0 +1,22 @@
+<div class="navigation sticky-top">
+  <div class="navbar-header title">
+        <span href="#head-start" class="nav-heading no-border"><strong> URL Shortner</strong></span>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+
+    <div class="social-login">
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf='!loggedIn' ><a href="javascript:void(0)" (click)="signInWithGoogle()">Sign in with <i class="fa fa-google"></i> </a></li>
+      <li *ngIf='loggedIn' class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hi {{user.name}}  <b class="caret"></b></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="javascript:void(0)" (click)="signOut()">Logout</a></li>
+        </ul>
+      </li>
+      <li><img class="circle-img" alt="Picture" *ngIf='loggedIn' src="{{user.photoUrl}}" /></li>
+
+    </ul>
+</div>
+  </div>
+</div>
