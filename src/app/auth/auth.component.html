@@ -52,7 +52,7 @@
     </div>
     </div>
     </div>-->
-<div class="container">
+<div *ngIf="loggedIn" class="container">
   <div class="row">
     <div class="col-xs-12">
       <form class="sa-innate-form" [formGroup]="form" (ngSubmit)="createUrls(form.value)">

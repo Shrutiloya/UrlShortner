@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {UrlList} from "../model/getUrlsResponse";
 import {Validators, FormControl, FormGroup} from "@angular/forms";
+import {DataService} from "../services/data.service";
 @Component({
   selector: 'app-body',
   templateUrl: './auth.component.html',
@@ -14,14 +15,20 @@ export class AuthComponent implements OnInit {
   private validUrl: boolean;
   private errMsg: string;
   public urlsAvailable: boolean;
+  public loggedIn: boolean;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private dataservice: DataService) { }
 
   ngOnInit() {
     this.form = new FormGroup({
       originalUrl : new FormControl("", Validators.required),
       shortUrl : new FormControl("", Validators.required)
     });
+    this.dataservice.getLoginStatus().subscribe(data => {
+      this.loggedIn = data;
+      console.log("Is user logged in:"+this.loggedIn);
+
+    })
   }
 
   getUrls() {

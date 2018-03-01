@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService, GoogleLoginProvider, SocialUser} from "angular4-social-login";
+import {DataService} from "../services/data.service";
 
 @Component({
     selector: 'app-navbar',
@@ -9,9 +10,9 @@ import {AuthService, GoogleLoginProvider, SocialUser} from "angular4-social-logi
 export class NavbarComponent implements OnInit {
 
   private user: SocialUser;
-  public loggedIn: boolean;
+  public loggedIn: boolean = false;
 
-    constructor(private authService: AuthService) {
+    constructor(private authService: AuthService, private dataService: DataService) {
     }
 
     ngOnInit() {
@@ -25,6 +26,7 @@ export class NavbarComponent implements OnInit {
         {
           localStorage.setItem("username", user.name);
           console.log(user);
+          this.dataService.setLoginStatus(true);
         }
 
       });
@@ -36,10 +38,11 @@ export class NavbarComponent implements OnInit {
     }
 
     /*
-     * Social logo9ut
+     * Social logout
      */
     signOut(): void {
       this.authService.signOut();
+      this.dataService.setLoginStatus(false);
     }
 
 

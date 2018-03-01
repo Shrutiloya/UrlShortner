@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SocialLoginModule, AuthServiceConfig } from "angular4-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angular4-social-login";
 import { HttpClientModule } from '@angular/common/http';
+import {DataService} from "./services/data.service";
 
 const routes: Routes = [
 {path:'', redirectTo:'/',pathMatch: 'full'},
@@ -47,7 +48,9 @@ export function provideConfig() {
   {
       provide: AuthServiceConfig,
       useFactory: provideConfig
-    }],
+    },
+    DataService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
